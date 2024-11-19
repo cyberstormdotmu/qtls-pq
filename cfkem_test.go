@@ -123,6 +123,7 @@ func TestHybridKEX(t *testing.T) {
 	for _, scheme := range []kem.Scheme{
 		hybrid.Kyber512X25519(),
 		hybrid.Kyber768X25519(),
+		hybrid.X25519MLKEM768(),
 	} {
 		run(scheme, true, true, false, false)
 		run(scheme, true, false, false, false)
